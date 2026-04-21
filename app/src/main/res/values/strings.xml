@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MadarSoft Task Bassem Nar</string>
+    <string name="screen_title_archive">The Archive</string>
+    <string name="input_header_workspace">DRAFTING WORKSPACE</string>
+    <string name="input_title_add_contributor">Add New Contributor</string>
+    <string name="input_description">Enter the biographical details to archive this profile within the Digital Atelier.</string>
+    <string name="label_full_name">Full Name</string>
+    <string name="label_job_title">Job Title</string>
+    <string name="label_age">Age</string>
+    <string name="label_gender_identity">Gender Identity</string>
+    <string name="gender_male">MALE</string>
+    <string name="gender_female">FEMALE</string>
+    <string name="button_save_entry">Save Entry</string>
+    <string name="display_header_directory">DIRECTORY</string>
+    <string name="display_title_saved_users">Saved Users</string>
+    <string name="display_total_entries">Total Entries: %1$d</string>
+    <string name="button_add_entry">Add Entry</string>
+    <string name="content_desc_delete">Delete</string>
+    <string name="user_age_format">%1$dy</string>
+    <string name="error_fill_all_fields">Please fill all fields</string>
+    <string name="error_invalid_age">Invalid age</string>
+    <string name="splash_description">A secure and organized digital\narchive for professional records.</string>
+</resources>
