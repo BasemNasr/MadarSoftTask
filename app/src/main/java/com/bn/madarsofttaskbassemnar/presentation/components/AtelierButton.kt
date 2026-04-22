@@ -14,6 +14,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.bn.madarsofttaskbassemnar.ui.theme.AtelierGradient
 
 @Composable
@@ -55,6 +56,3 @@ fun AtelierButton(
         }
     }
 }
-
-// Extension to avoid conflict with standard Material headlineSmall if needed
-private val androidx.compose.ui.unit.TextUnit.sp get() = this

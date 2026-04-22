@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import com.bn.madarsofttaskbassemnar.util.UiText
 import com.bn.madarsofttaskbassemnar.R
+import javax.inject.Inject
 
 data class InputUiState(
     val name: String = "",

@@ -11,10 +11,10 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Architecture
-import androidx.compose.material.icons.filled.Female
-import androidx.compose.material.icons.filled.Male
-import androidx.compose.material.icons.filled.Save
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Face
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -25,13 +25,11 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.compose.ui.res.stringResource
 import com.bn.madarsofttaskbassemnar.R
 import com.bn.madarsofttaskbassemnar.presentation.components.AtelierButton
 import com.bn.madarsofttaskbassemnar.presentation.components.AtelierTextField
-import com.bn.madarsofttaskbassemnar.ui.theme.PrimaryFixed
 import com.bn.madarsofttaskbassemnar.ui.theme.SurfaceContainerLow
 import com.bn.madarsofttaskbassemnar.ui.theme.SurfaceContainerLowest
 
@@ -66,7 +64,7 @@ fun InputScreen(
                 title = {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(
-                            imageVector = Icons.Default.Architecture,
+                            imageVector = Icons.Default.Home,
                             contentDescription = null,
                             modifier = Modifier.size(24.dp),
                             tint = MaterialTheme.colorScheme.primary
@@ -174,14 +172,14 @@ fun InputScreen(
                     ) {
                         GenderCard(
                             label = stringResource(R.string.gender_male),
-                            icon = Icons.Default.Male,
+                            icon = Icons.Default.Face,
                             isSelected = uiState.gender == "MALE",
                             onClick = { viewModel.onGenderChange("MALE") },
                             modifier = Modifier.weight(1f)
                         )
                         GenderCard(
                             label = stringResource(R.string.gender_female),
-                            icon = Icons.Default.Female,
+                            icon = Icons.Default.AccountCircle,
                             isSelected = uiState.gender == "FEMALE",
                             onClick = { viewModel.onGenderChange("FEMALE") },
                             modifier = Modifier.weight(1f)
@@ -194,7 +192,7 @@ fun InputScreen(
                 AtelierButton(
                     text = stringResource(R.string.button_save_entry),
                     onClick = viewModel::saveUser,
-                    icon = Icons.Default.Save
+                    icon = Icons.Default.Check
                 )
             }
         }

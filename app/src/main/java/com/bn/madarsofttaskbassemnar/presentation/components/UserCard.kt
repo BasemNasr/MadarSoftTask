@@ -16,6 +16,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.res.stringResource
 import com.bn.madarsofttaskbassemnar.R
 import com.bn.madarsofttaskbassemnar.domain.model.User
@@ -50,7 +51,7 @@ fun UserCard(
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
-                        imageVector = if (user.gender == "MALE") Icons.Default.Person else Icons.Default.Person2,
+                        imageVector = if (user.gender == "MALE") Icons.Default.Person else Icons.Default.AccountCircle,
                         contentDescription = null,
                         tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.size(24.dp)
@@ -90,11 +91,11 @@ fun UserCard(
 
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 MetaDataChip(
-                    icon = Icons.Default.Cake,
+                    icon = Icons.Default.Info,
                     text = stringResource(R.string.user_age_format, user.age)
                 )
                 MetaDataChip(
-                    icon = if (user.gender == "MALE") Icons.Default.Male else Icons.Default.Female,
+                    icon = if (user.gender == "MALE") Icons.Default.Face else Icons.Default.Face,
                     text = if (user.gender == "MALE") stringResource(R.string.gender_male) else stringResource(R.string.gender_female)
                 )
             }
@@ -106,7 +107,7 @@ fun UserCard(
 fun MetaDataChip(icon: ImageVector, text: String) {
     Row(
         modifier = Modifier
-            .clip(RoundedCornerShape(full = true))
+            .clip(RoundedCornerShape(50.dp))
             .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))
             .padding(horizontal = 8.dp, vertical = 4.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -127,5 +128,3 @@ fun MetaDataChip(icon: ImageVector, text: String) {
         )
     }
 }
-
-private val RoundedCornerShape.Companion.full get() = 99.dp
