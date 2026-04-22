@@ -13,6 +13,9 @@ hilt = "2.52"
 navigation = "2.8.5"
 ksp = "2.1.0-1.0.29"
 googleFonts = "1.7.1"
+coroutines = "1.9.0"
+turbine = "1.2.0"
+mockk = "1.13.14"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,6 +48,11 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 
 # Google Fonts
 androidx-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "googleFonts" }
+
+# Testing
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
